@@ -4,3 +4,22 @@
   top: 80px;
   padding: 10px 70px;
 }
+
+.active-sub {
+  color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.form-control {
+  border-color: #cad1d7;
+  color: #525f7f;
+}
+
+.form-control:focus {
+  border-color: rgba(94, 114, 448);
+  color: #525f7f;
+}
+
+.file-label-custom {
+  font-size: 0.875rem;
+  color: #adb5bd
+}

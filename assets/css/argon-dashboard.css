@@ -2029,6 +2029,11 @@ pre code {
   box-shadow: none, none;
 }
 
+.form-control::-ms-input-placeholder {
+  color: #adb5bd;
+  opacity: 1;
+}
+
 .form-control::placeholder {
   color: #adb5bd;
   opacity: 1;
@@ -16086,10 +16091,6 @@ textarea[resize="horizontal"] {
   border-color: rgba(50, 151, 211, 0.25);
 }
 
-.focused .form-control {
-  border-color: rgba(50, 151, 211, 0.25);
-}
-
 .header {
   position: relative;
 }
@@ -16291,10 +16292,6 @@ textarea[resize="horizontal"] {
 .focused .input-group-text {
   color: #8898aa;
   background-color: #fff;
-  border-color: rgba(50, 151, 211, 0.25);
-}
-
-.focused .form-control {
   border-color: rgba(50, 151, 211, 0.25);
 }
 
