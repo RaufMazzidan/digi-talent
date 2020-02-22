@@ -5,7 +5,7 @@
       <h3 class="mb-0">Add Talent</h3>
     </div>
     <div class="card-body">
-      <form method="POST" action="<?=base_url()?>addTalent/create">
+      <form method="POST" action="<?=base_url()?>add_talent/create">
         <h6 class="heading-small text-muted mb-4">Personal information</h6>
         <div class="pl-lg-4">
           <div class="row">

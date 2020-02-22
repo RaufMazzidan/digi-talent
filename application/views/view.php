@@ -117,7 +117,7 @@
             </a>
           </li>
           <li class="nav-item mm-active">
-            <a class="nav-link <?= $page === 'data-training' || $page === 'talent-management' ? 'active' : ''?>" href="#">
+            <a class="nav-link <?= $page === 'data-training' || $page === 'fuzzy-c-means' ? 'active' : ''?>" href="#">
               <i aria-expanded="true" class="ni ni-paper-diploma text-primary"></i>
               Talent Management
               <span class="fa arrow" style="margin-left:auto"></span>
@@ -126,8 +126,8 @@
               <li style="list-style-type: none;">
                 <a
                   style="padding-left: 20px;"
-                  class="nav-link <?= $page === 'talent-management' ? 'active-sub' : ''?>"
-                  href="<?=base_url()?>talent"
+                  class="nav-link <?= $page === 'data-training' ? 'active-sub' : ''?>"
+                  href="<?=base_url()?>data-training"
                 >
                   Data Training
                 </a>
@@ -135,8 +135,8 @@
               <li style="list-style-type: none;">
               <a
                   style="padding-left: 20px;"
-                  class="nav-link <?= $page === 'data-training' ? 'active-sub' : ''?>"
-                  href="<?=base_url()?>talent/training"
+                  class="nav-link <?= $page === 'fuzzy-c-means' ? 'active-sub' : ''?>"
+                  href="<?=base_url()?>fuzzy-c-means"
                 >
                   Fuzzy C-Means
                 </a>

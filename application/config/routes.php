@@ -50,5 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'dashboard';
+$route['data-training'] = 'data_training';
+$route['fuzzy-c-means'] = 'fuzzy_c_means';
+$route['add-talent'] = 'add_talent';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

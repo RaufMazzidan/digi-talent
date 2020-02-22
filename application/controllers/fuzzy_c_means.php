@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class talent extends CI_Controller {
+class fuzzy_c_means extends CI_Controller {
   public function __construct()
 		{
       parent::__construct();
@@ -11,13 +11,7 @@ class talent extends CI_Controller {
 		}
 	public function index()
 	{
-		$data['page']= "talent-management";
-		$this->load->view('view', $data);
-	}
-
-	public function training()
-	{
-		$data['page']= "data-training";
+		$data['page']= "fuzzy-c-means";
 		$this->load->view('view', $data);
 	}
 }

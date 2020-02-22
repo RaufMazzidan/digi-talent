@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class addTalent extends CI_Controller {
+class add_talent extends CI_Controller {
   public function __construct()
 		{
       parent::__construct();
@@ -11,7 +11,7 @@ class addTalent extends CI_Controller {
 		}
 	public function index()
 	{
-		$data['page']= "addTalent";
+		$data['page']= "add-talent";
 		$this->load->view('view', $data);
 	}
 	public function create()
@@ -21,6 +21,7 @@ class addTalent extends CI_Controller {
 			$condition = $_POST['database'][$db];
 			echo $condition;
 		}
+
 		$be_array = boolval($_POST['checkbox-be']) ? $_POST['checkbox-be'] : [];
 		foreach ($be_array as $be) {
 			$condition = $_POST['backend'][$be];
