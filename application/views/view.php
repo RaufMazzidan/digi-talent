@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+    Digi Talent
   </title>
   <!-- Favicon -->
   <link href="<?=base_url()?>assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -151,17 +151,17 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main" style="padding-left: 30px !important; padding-right: 30px !important">
       <div class="container-fluid">
         <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./">Dashboard</a>
+        <span class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"><?=$page_label?></span>
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="<?=base_url()?>assets/img/theme/team-4-800x800.jpg">
+                  <img alt="Image placeholder" src="<?=base_url()?>assets/img/theme/react.jpg">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                  <span class="mb-0 text-sm  font-weight-bold" style="text-transform:capitalize"><?=$this->session->userdata('username')?></span>
                 </div>
               </div>
             </a>

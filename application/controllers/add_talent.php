@@ -11,7 +11,8 @@ class add_talent extends CI_Controller {
 		}
 	public function index()
 	{
-		$data['page']= "add-talent";
+    $data['page']= "add-talent";
+    $data['page_label']= "INPUT TALENT";
 		$this->load->view('view', $data);
 	}
 	public function create()

@@ -12,6 +12,7 @@ class data_training extends CI_Controller {
 	public function index()
 	{
 		$data['page']= "data-training";
+		$data['page_label']= "Data Training";
 		$this->load->view('view', $data);
 	}
 }

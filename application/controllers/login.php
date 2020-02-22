@@ -15,22 +15,20 @@ class login extends CI_Controller {
 	}
 
 	public function verify() {
-		// echo "login";
-		// if ($this->user->login()->num_rows() > 0) {
-			// $data =$this->user->login()->row();
+		if ($this->user->login()->num_rows() > 0) {
+			$data =$this->user->login()->row();
 			$array = array(
 				'login' => TRUE ,
-				'nama' => '$data->nama_admin',
-				'username' => '$data->username',
+				'username' => $data->username,
 			);
 			$this->session->set_userdata( $array );
 			redirect('dashboard','refresh');
-		// }
-		// else{
-			// echo"gagal";
-			// $this->session->set_flashdata('pesan', 'Username Atau Password Salah');
-			// redirect('admin/signin','refresh');
-		// }
+		}
+		else{
+			echo"gagal";
+			$this->session->set_flashdata('pesan', 'Username Atau Password Salah');
+			redirect('admin/signin','refresh');
+		}
 	}
 	public function logout()
 		{

@@ -12,6 +12,7 @@ class dashboard extends CI_Controller {
 	public function index()
 	{
 		$data['page']= "dashboard";
+		$data['page_label']= "DASHBOARD";
 		$this->load->view('view', $data);
 	}
 }
