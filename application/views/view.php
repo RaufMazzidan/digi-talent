@@ -16,7 +16,7 @@
   <link href="<?=base_url()?>assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="<?=base_url()?>assets/css/argon-dashboard.css?v=1.1.1" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/metismenu/dist/metisMenu.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/metisMenu.min.css">
   <link href="<?=base_url()?>assets/css/custom-styles.css" rel="stylesheet" />
 </head>
 
@@ -198,10 +198,10 @@
   <script src="<?=base_url()?>assets/js/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
   <!--   Argon JS   -->
   <script src="<?=base_url()?>assets/js/argon-dashboard.js?v=1.1.1"></script>
-  <script src="https://unpkg.com/metismenu"></script>
+  <script src="<?=base_url()?>assets/js/metisMenu.min.js"></script>
   <script>
     $(function() {
-      $('#menu').metisMenu({ toggle: true});
+      $('#menu').metisMenu({ toggle: false });
     });
   </script>
   <script>
