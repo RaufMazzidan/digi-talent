@@ -205,10 +205,13 @@
     });
   </script>
   <script>
-  $('#inputFile').change(function(e){
+  $('#input-file-photo').change(function(e){
       var fileName = e.target.files[0].name;
-      $('#inputFile-label').text(fileName).css("color", "#525f7f");;
-      // alert('The file "' + fileName +  '" has been selected.');
+      $('#input-file-photo-label').text(fileName).css("color", "#525f7f");
+  });
+  $('#input-file-resume').change(function(e){
+      var fileName = e.target.files[0].name;
+      $('#input-file-resume-label').text(fileName).css("color", "#525f7f");
   });
 </script>
 </body>

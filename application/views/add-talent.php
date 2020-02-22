@@ -18,19 +18,29 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label class="form-control-label">Jenis Kelamin</label>
-                <input type="text" class="form-control" placeholder="Laki-Laki / Perempuan" name="post_name">
+                <div style="padding:10px 0px">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="gender" class="custom-control-input" value="M">
+                    <label class="custom-control-label" for="customRadioInline1">Laki Laki</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="gender" class="custom-control-input" value="F">
+                    <label class="custom-control-label" for="customRadioInline2">Perempuan</label>
+                  </div>
+                </div>
+                <!-- <input type="text" class="form-control" placeholder="Laki-Laki / Perempuan" name="post_name"> -->
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <label class="form-control-label">Tempat, Tanggal Lahir</label>
-                <input type="text" class="form-control" placeholder="Jakarta, 17 Agustus 1945" name="post_name">
+                <label class="form-control-label">Tempat Lahir</label>
+                <input type="text" class="form-control" placeholder="Masukkan Kota Kelahiran" name="post_name">
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <label class="form-control-label">Nomor Identitas</label>
-                <input type="text" class="form-control" placeholder="Masukkan Nomor Identitas" name="post_name">
+                <label class="form-control-label">Tanggal Lahir</label>
+                <input onkeydown="event.preventDefault()" class="form-control datepicker" placeholder="Pilih Tanggal" type="text" name="birth_date">
               </div>
             </div>
             <div class="col-lg-6">
@@ -41,13 +51,31 @@
             </div>
             <div class="col-lg-6">
               <div class="form-group">
+                <label class="form-control-label">Jenis Identitas</label>
+                <select class="form-control" name="post_name">
+                  <option disabled selected="selected">Pilih</option>
+                  <option value="KTP">KTP</option>
+                  <option value="PASPOR">PASPOR</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="form-control-label">Nomor Identitas</label>
+                <input type="text" class="form-control" placeholder="Masukkan Nomor Identitas" name="post_name">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
                 <label class="form-control-label">Pendidikan Terakhir</label>
                 <select class="form-control" name="post_name">
                   <option disabled selected="selected">Pilih</option>
-                  <option value="menu 1">Menu 1</option>
-                  <option value="menu 2">Menu 2</option>
-                  <option value="menu 3">Menu 3</option>
-                  <option value="menu 4">Menu 4</option>
+                  <option value="SD">SD - Sederajat</option>
+                  <option value="SMP">SMP - Sederajat</option>
+                  <option value="SMA">SMA - Sederajat</option>
+                  <option value="S1">Sarjana 1</option>
+                  <option value="S2">Sarjana 2</option>
+                  <option value="S3">Sarjana 3</option>
                 </select>
               </div>
             </div>
@@ -62,10 +90,9 @@
                 <label class="form-control-label" for="input-last-name">Program Studi</label>
                 <select class="form-control" name="post_name">
                   <option disabled selected="selected">Pilih</option>
-                  <option value="menu 1">Menu 1</option>
-                  <option value="menu 2">Menu 2</option>
-                  <option value="menu 3">Menu 3</option>
-                  <option value="menu 4">Menu 4</option>
+                  <?php foreach ($major as $i => $item) { ?>
+                      <option value="<?=$item->majorId?>"><?=$item->name?></option>
+                  <?php } ?>
                 </select>
               </div>
             </div>
@@ -74,18 +101,24 @@
                 <label class="form-control-label" for="input-last-name">Role</label>
                 <select class="form-control" name="post_name">
                   <option disabled selected="selected">Pilih</option>
-                  <option value="menu 1">Menu 1</option>
-                  <option value="menu 2">Menu 2</option>
-                  <option value="menu 3">Menu 3</option>
-                  <option value="menu 4">Menu 4</option>
+                  <?php foreach ($position as $i => $item) { ?>
+                      <option value="<?=$item->positionId?>"><?=$item->name?></option>
+                  <?php } ?>
                 </select>
               </div>
             </div>
             <div class="col-lg-6">
               <label class="form-control-label">Photo</label>
               <div class="form-group custom-file">
-                <input type="file" class="custom-file-input" id="inputFile" accept="image/*" >
-                <label id="inputFile-label" class="custom-file-label file-label-custom">Select file</label>
+                <input type="file" class="custom-file-input" id="input-file-photo" accept="image/*" >
+                <label id="input-file-photo-label" class="custom-file-label file-label-custom">Select file</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <label class="form-control-label">Resume</label>
+              <div class="form-group custom-file">
+                <input type="file" class="custom-file-input" id="input-file-resume" accept=".pdf" >
+                <label id="input-file-resume-label" class="custom-file-label file-label-custom">Select file</label>
               </div>
             </div>
           </div>
@@ -98,7 +131,7 @@
             <div class="col-lg-4">
               <div class="form-group">
                 <label class="form-control-label" for="input-last-name">Waktu</label>
-                <input onkeydown="event.preventDefault()" class="form-control datepicker" placeholder="Select date" type="text">
+                <input onkeydown="event.preventDefault()" class="form-control datepicker" placeholder="Select date" type="text" name="date">
               </div>
             </div>
             <div class="col-lg-4">
