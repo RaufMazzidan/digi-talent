@@ -5,7 +5,7 @@
       <h3 class="mb-0">Add Talent</h3>
     </div>
     <div class="card-body">
-      <form>
+      <form method="POST" action="<?=base_url()?>addTalent/create">
         <h6 class="heading-small text-muted mb-4">Personal information</h6>
         <div class="pl-lg-4">
           <div class="row">
@@ -129,12 +129,59 @@
         </div>
         <hr class="my-4" />
         <!-- Description -->
-        <h6 class="heading-small text-muted mb-4">About me</h6>
+        <h6 class="heading-small text-muted mb-4">Keahlian</h6>
         <div class="pl-lg-4">
-          <div class="form-group">
-            <label>About Me</label>
-            <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+          <div class="row">
+            <div class="col-lg-4">
+              <label class="form-control-label" for="input-last-name">Database</label>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox mb-2">
+                  <input type='hidden' name='database[0]' value='Oracle' />
+                  <input type="checkbox" class="custom-control-input" id="db-0" name="checkbox-db[]" value="0">
+                  <label class="custom-control-label" for="db-0">Oracle</label>
+                </div>
+                <div class="custom-control custom-checkbox mb-2">
+                  <input type='hidden' name='database[1]' value='Mongo' />
+                  <input type="checkbox" class="custom-control-input" id="db-1" name="checkbox-db[]" value="1">
+                  <label class="custom-control-label" for="db-1">Mongo</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <label class="form-control-label" for="input-last-name">Backend</label>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox mb-2">
+                  <input type='hidden' name='backend[0]' value='Node JS' />
+                  <input type="checkbox" class="custom-control-input" id="be-0" name="checkbox-be[]" value="0">
+                  <label class="custom-control-label" for="be-0">Node JS</label>
+                </div>
+                <div class="custom-control custom-checkbox mb-2">
+                  <input type='hidden' name='backend[1]' value='Laravel' />
+                  <input type="checkbox" class="custom-control-input" id="be-1"  name="checkbox-be[]" value="1">
+                  <label class="custom-control-label" for="be-1">Laravel</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <label class="form-control-label" for="input-last-name">Frontend</label>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox mb-2">
+                  <input type='hidden' name='frontend[0]' value='React JS' />
+                  <input type="checkbox" class="custom-control-input" id="fe-0" name="checkbox-fe[]" value="0">
+                  <label class="custom-control-label" for="fe-0">React JS</label>
+                </div>
+                <div class="custom-control custom-checkbox mb-2">
+                  <input type='hidden' name='frontend[1]' value='Vue JS' />
+                  <input type="checkbox" class="custom-control-input" id="fe-1"  name="checkbox-fe[]" value="1">
+                  <label class="custom-control-label" for="fe-1">Vue JS</label>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="pl-lg-4" style="float:right">
+          <button class="btn btn-danger" type="button">Cancel</button>
+          <button class="btn btn-primary" type="submit">Submit</button>
         </div>
       </form>
     </div>

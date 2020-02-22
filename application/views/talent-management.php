@@ -12,7 +12,7 @@
           </div>
           <div class="col-3 pl-md-7">
             <div class="card-header border-0">
-              <a href="#" class="btn btn-primary" role="button" aria-pressed="true">Input Label</a>
+              <a href="<?=base_url()?>addTalent" class="btn btn-primary" role="button" aria-pressed="true">Input Talent</a>
             </div>
           </div>
         </div>
